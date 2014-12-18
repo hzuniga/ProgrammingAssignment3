@@ -66,7 +66,7 @@ run_analysis <- function()
       #Create tidy data with the average of each variable for each activity
       #and each subject using dcast to get a data frame output
       tidyData <- dcast (meltData, Subject + Activity_Name ~ variable, mean) 
-      #write.table(tidyData, file="./tidyData.txt",row.name=FALSE)
+      write.table(tidyData, file="./tidyData.txt",row.name=FALSE)
       
       
 }
